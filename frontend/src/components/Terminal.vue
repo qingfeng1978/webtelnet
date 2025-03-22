@@ -1123,36 +1123,6 @@ const initializeAddons = (): boolean => {
   }
 }
 
-// 安全地卸载插件
-const disposeAddons = async () => {
-  console.log('开始卸载终端插件...');
-  
-  const safeDisposeAddon = async (addon: any, name: string) => {
-    if (!addon) {
-      console.log(`${name} 不存在，跳过卸载`);
-      return;
-    }
-
-    try {
-      console.log(`正在卸载 ${name}...`);
-      await addon.dispose();
-      console.log(`${name} 卸载成功`);
-    } catch (error) {
-      console.warn(`${name} 卸载失败:`, error);
-    }
-  };
-
-  await safeDisposeAddon(fitAddon.value, 'FitAddon');
-  await safeDisposeAddon(serializeAddon.value, 'SerializeAddon');
-  await safeDisposeAddon(searchAddon.value, 'SearchAddon');
-
-  // 重置插件引用
-  fitAddon.value = null;
-  serializeAddon.value = null;
-  searchAddon.value = null;
-  console.log('插件引用已重置');
-};
-
 // 断开终端连接的函数
 const disconnect = () => {
   console.log(`断开终端连接: ${sessionID.value}`)

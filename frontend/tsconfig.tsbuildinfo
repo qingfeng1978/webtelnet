@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/vite-env.d.ts","./src/app.vue","./src/components/servertree.vue","./src/components/terminal.vue","./src/components/terminalmanager.vue","./src/components/terminalsearch.vue"],"version":"5.7.3"}

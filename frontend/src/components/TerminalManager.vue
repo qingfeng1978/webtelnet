@@ -47,7 +47,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, onMounted, onUnmounted, defineEmits, defineExpose, watch, computed } from 'vue'
+import { ref, reactive, onMounted, onUnmounted, defineEmits, defineExpose } from 'vue'
 import Terminal from './Terminal.vue'
 import TerminalSearch from './TerminalSearch.vue'
 import { ElMessage } from 'element-plus'
@@ -445,7 +445,7 @@ defineExpose({
 })
 
 // 初始化和清理
-let checkInterval: number | undefined;
+// let checkInterval: number | undefined;
 
 onMounted(() => {
   console.log('TerminalManager组件已挂载')
